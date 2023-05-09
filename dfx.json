@@ -1,0 +1,29 @@
+{
+  "canisters": {
+    "assignments_backend": {
+      "main": "src/assignments_backend/main.mo",
+      "type": "motoko"
+    },
+    "assignments_frontend": {
+      "dependencies": [
+        "assignments_backend"
+      ],
+      "frontend": {
+        "entrypoint": "src/assignments_frontend/src/index.html"
+      },
+      "source": [
+        "src/assignments_frontend/assets",
+        "dist/assignments_frontend/"
+      ],
+      "type": "assets"
+    }
+  },
+  "defaults": {
+    "build": {
+      "args": "",
+      "packtool": ""
+    }
+  },
+  "output_env_file": ".env",
+  "version": 1
+}
